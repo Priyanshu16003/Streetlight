@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginScreen">
+
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.bhaskar.streetlight.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginScreen_to_registrationFragment2"
+            app:destination="@id/registrationFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left" />
+        <action
+            android:id="@+id/action_loginScreen_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.bhaskar.streetlight.register.RegisterFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration">
+        <action
+            android:id="@+id/action_registrationFragment_to_loginScreen"
+            app:destination="@id/loginScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.bhaskar.streetlight.screens.DashBoardFragment"
+        android:label="fragment_dash_board"
+        tools:layout="@layout/fragment_dash_board">
+        <action
+            android:id="@+id/action_dashBoardFragment_to_complainFragment"
+            app:destination="@id/complainFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_feedbackFragment"
+            app:destination="@id/feedbackFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_newApplicationFragment"
+            app:destination="@id/newApplicationFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_trackFragment"
+            app:destination="@id/trackFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_loginScreen"
+            app:destination="@id/loginScreen" />
+        <argument
+            android:name="userName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/complainFragment"
+        android:name="com.bhaskar.streetlight.screens.ComplainFragment"
+        android:label="fragment_complain"
+        tools:layout="@layout/fragment_complain">
+        <action
+            android:id="@+id/action_complainFragment_to_trackFragment"
+            app:destination="@id/trackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.bhaskar.streetlight.screens.FeedbackFragment"
+        android:label="fragment_feedback"
+        tools:layout="@layout/fragment_feedback">
+        <action
+            android:id="@+id/action_feedbackFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newApplicationFragment"
+        android:name="com.bhaskar.streetlight.screens.NewApplicationFragment"
+        android:label="fragment_new_application"
+        tools:layout="@layout/fragment_new_application">
+        <action
+            android:id="@+id/action_newApplicationFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trackFragment"
+        android:name="com.bhaskar.streetlight.screens.TrackFragment"
+        android:label="fragment_track"
+        tools:layout="@layout/fragment_track" />
+</navigation>

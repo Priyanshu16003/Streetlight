@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Streetlight" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <!--Create a new style and name it splashScreenTheme and add the following code-->
+    <style name="splashScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">#9C27B0</item>
+        <item name="android:statusBarColor">@color/black</item>
+    </style>
+
+    <!-- Default Code do not change it.
+        we will use it as our theme after
+        the aplash screen is shown-->
+    <!-- Base application theme -->
+    <style name="Theme.SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color-->
+        <item name="colorPrimary">#2F8D46</item>
+        <item name="colorPrimaryVariant">#2F8D46</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#2F8D46</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">
+            @drawable/splash_screen_layerlist
+        </item>
+        <item name="android:buttonStyle">
+            @style/Base.Widget.AppCompat.Button.Colored
+        </item>
+        <item name="colorAccent">
+            @color/white
+        </item>
+        <item name="colorPrimaryDark">
+            @color/black
+        </item>
+    </style>
+
+
+</resources>

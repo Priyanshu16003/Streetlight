@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Streetlight</string>
+    <string name="button">click button</string>
+    <string name="dialogTitle">Registration</string>
+    <string name="dialogMessage">Congratulation You have been Successfully Registered…!</string>
+
+    <string name="hello_blank_fragment">Hello fragment</string>
+
+</resources>
+

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".register.RegisterFragment">
+
+    <data>
+
+        <variable
+            name="myViewModel"
+            type="com.bhaskar.streetlight.register.RegisterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_icon">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
+            android:text="Registration"
+            android:textAlignment="center"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.166" />
+
+        <EditText
+            android:id="@+id/first_name_text_field"
+            android:layout_width="349dp"
+            android:layout_height="50dp"
+            android:background="@drawable/login_bg"
+            android:hint="First Name"
+            android:text="@={myViewModel.inputFirstName}"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.339" />
+
+        <EditText
+            android:id="@+id/secondNameTextField"
+            android:layout_width="349dp"
+            android:layout_height="50dp"
+            android:background="@drawable/login_bg"
+            android:hint="Last Name"
+            android:text="@={myViewModel.inputLastName}"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.444" />
+
+        <EditText
+            android:id="@+id/userNameTextField"
+            android:layout_width="349dp"
+            android:layout_height="50dp"
+            android:background="@drawable/login_bg"
+            android:hint="UserName"
+            android:text="@={myViewModel.inputUsername}"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.552" />
+
+        <EditText
+            android:id="@+id/passwordTextField"
+            android:layout_width="349dp"
+            android:layout_height="50dp"
+            android:background="@drawable/login_bg"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:text="@={myViewModel.inputPassword}"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.666" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="138dp"
+            android:layout_height="61dp"
+            android:backgroundTint="#9E0F81DA"
+            android:onClick="@{()->myViewModel.sumbitButton()}"
+            android:text="Register"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.797" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
